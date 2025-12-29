@@ -91,6 +91,23 @@
                 opacity: 0;
             }
         }
+        .hearts {
+            font-size: 22px;
+            letter-spacing: 6px;
+            margin-top: 25px;
+            animation: fadeInHearts 2s ease;
+        }
+    
+        @keyframes fadeInHearts {
+            from {
+                opacity: 0;
+                transform: translateY(10px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
     </style>
 </head>
 
@@ -114,17 +131,17 @@
 
 
 
-        <p>
-            Daha nice yılları, anıları ve hayalleri  
-            el ele birlikte yaşamaya 💖
+        <p class="hearts">
+            ❤️ 💖 💘 💝 💗 💓 💞 💟 ❣️
         </p>
+
 
         <button onclick="surprise()">Bana tıkla 💌</button>
     </div>
 
     <script>
         function surprise() {
-            alert("Seni çok seviyorum ❤️\nİyi ki varsın.");
+            alert("Seni çok seviyorum minnak doktor 💗\nİyi ki varsın.");
         }
 
         function createHeart() {
@@ -143,5 +160,6 @@
 
 </body>
 </html>
+
 
 
