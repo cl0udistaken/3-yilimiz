@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>3. Yılımız ❤️</title>
+
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            min-height: 100vh;
+            background: linear-gradient(180deg, #ff758c, #ff7eb3);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Segoe UI', sans-serif;
+            overflow-x: hidden;
+        }
+
+        .card {
+            background: white;
+            width: 90%;
+            max-width: 380px;
+            border-radius: 25px;
+            padding: 25px;
+            text-align: center;
+            box-shadow: 0 25px 50px rgba(0,0,0,0.25);
+            animation: fadeIn 1.2s ease;
+        }
+
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        h1 {
+            color: #ff4d6d;
+            margin-bottom: 10px;
+        }
+
+        .date {
+            font-size: 14px;
+            color: #999;
+            margin-bottom: 20px;
+        }
+
+        p {
+            font-size: 15px;
+            color: #444;
+            line-height: 1.6;
+        }
+
+        .photo {
+            width: 100%;
+            border-radius: 18px;
+            margin: 15px 0;
+        }
+
+        button {
+            margin-top: 20px;
+            padding: 12px 20px;
+            border: none;
+            border-radius: 20px;
+            background: #ff4d6d;
+            color: white;
+            font-size: 14px;
+            cursor: pointer;
+        }
+
+        .heart {
+            position: fixed;
+            bottom: -20px;
+            color: #fff;
+            font-size: 20px;
+            animation: floatUp 6s linear forwards;
+        }
+
+        @keyframes floatUp {
+            to {
+                transform: translateY(-110vh);
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+    <div class="card">
+        <h1>3. Yılımız ❤️</h1>
+        <div class="date">2022 → 2025</div>
+
+        <p>
+            Seninle geçen 3 yıl bana hayatımın en güzel anılarını verdi.  
+            Gülüşün, sesin, varlığın…  
+            Hepsi iyi ki benim hayatımda.
+        </p>
+
+        <img src="https://drive.google.com/uc?export=view&id=1KVVnpECCWHSoswpVoWKkhax7MktzASR_" class="photo">
+        <img src="https://drive.google.com/uc?export=view&id=1iMBuijk0dUaFCMspknUnF2cKkJ3We0G_" class="photo">
+        <img src="https://drive.google.com/uc?export=view&id=16STvGpRaOGk6A3PiqIdk5mLarhcATjYx" class="photo">
+
+
+
+        <p>
+            Daha nice yılları, anıları ve hayalleri  
+            el ele birlikte yaşamaya 💖
+        </p>
+
+        <button onclick="surprise()">Bana tıkla 💌</button>
+    </div>
+
+    <script>
+        function surprise() {
+            alert("Seni çok seviyorum ❤️\nİyi ki varsın.");
+        }
+
+        function createHeart() {
+            const heart = document.createElement("div");
+            heart.className = "heart";
+            heart.innerText = "❤️";
+            heart.style.left = Math.random() * 100 + "vw";
+            heart.style.fontSize = (Math.random() * 15 + 10) + "px";
+            document.body.appendChild(heart);
+
+            setTimeout(() => heart.remove(), 6000);
+        }
+
+        setInterval(createHeart, 350);
+    </script>
+
+</body>
+</html>
